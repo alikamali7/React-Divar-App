@@ -1,4 +1,5 @@
-import { checkOtp } from "../../services/Auth";
+import { checkOtp } from "services/Auth";
+import { setCookie } from "utils/cookie";
 
 function CheckOtpForm({ code, setCode, setStep, mobile }) {
   const submitHandler = async (event) => {
@@ -7,9 +8,9 @@ function CheckOtpForm({ code, setCode, setStep, mobile }) {
     if (code.length !== 5) return;
 
     const { response, error } = await checkOtp(mobile, code);
-
+    console.log({ response, error });
     if (response) {
-      console.log(response);
+      setCookie(response.data);
     }
     if (error) console.log(error.response.data.message);
   };
