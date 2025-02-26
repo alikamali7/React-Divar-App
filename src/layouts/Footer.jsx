@@ -1,5 +1,11 @@
+import styles from "./Footer.module.css";
+
 function Footer() {
-  return <div>Footer</div>;
+  return (
+    <footer className={styles.footer}>
+      <p>Developed by Ali whit 💗</p>
+    </footer>
+  );
 }
 
 export default Footer;
