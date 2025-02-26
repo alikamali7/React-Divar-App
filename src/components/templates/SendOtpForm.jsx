@@ -1,5 +1,7 @@
 import { sendOtp } from "services/Auth";
 
+import styles from "./SendOtpForm.module.css";
+
 function SendOtpForm({ mobile, setMobile, setStep }) {
   const submitHandler = async (event) => {
     event.preventDefault();
@@ -12,7 +14,7 @@ function SendOtpForm({ mobile, setMobile, setStep }) {
     if (error) console.log(error.response.data.message);
   };
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} className={styles.form}>
       <p>ورود به حساب کاربری</p>
       <span>
         برای استفاده از امکانات دیوار، لطفا شماره موبایل خود را وارد کنید. کد
