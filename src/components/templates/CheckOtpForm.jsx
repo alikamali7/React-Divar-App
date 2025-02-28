@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { checkOtp } from "services/Auth";
 import { getProfile } from "services/user";
 import { setCookie } from "utils/cookie";
+import { p2e } from "utils/numbers";
 
 import styles from "./CheckOtpForm.module.css";
 
@@ -35,7 +36,7 @@ function CheckOtpForm({ code, setCode, setStep, mobile }) {
         id="input"
         placeholder="کد تایید"
         value={code}
-        onChange={(e) => setCode(e.target.value)}
+        onChange={(e) => setCode(p2e(e.target.value))}
       />
       <button type="submit">ورود</button>
       <button onClick={() => setStep(1)} className={styles.backButton}>

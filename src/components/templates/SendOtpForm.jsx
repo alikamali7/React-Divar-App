@@ -1,4 +1,5 @@
 import { sendOtp } from "services/Auth";
+import { p2e } from "utils/numbers";
 
 import styles from "./SendOtpForm.module.css";
 
@@ -26,7 +27,7 @@ function SendOtpForm({ mobile, setMobile, setStep }) {
         id="input"
         placeholder="شماره موبایل"
         value={mobile}
-        onChange={(e) => setMobile(e.target.value)}
+        onChange={(e) => setMobile(p2e(e.target.value))}
       />
       <button type="submit">ارسال کد تایید</button>
     </form>
