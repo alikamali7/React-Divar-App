@@ -17,10 +17,15 @@
 }
 
 .header span {
+  cursor: pointer;
   display: flex;
   align-items: center;
   color: gray;
   height: 50px;
+  transition: all 0.2s ease-in;
+}
+.header span:hover {
+  color: #000;
 }
 
 .header span p {
@@ -29,6 +34,42 @@
 }
 
 .button {
+  background-color: #a62626;
+  color: #fff;
+  height: 40px;
+  width: 80px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 40px;
+}
+.dropdownMenu {
+  background-color: #fff;
+  width: 224px;
+  padding: 2px;
+  display: none;
+  /* display: flex; */
+  /* flex-direction: column; */
+  box-shadow: rgb(99, 99, 99) 0px 2px 8px 0px;
+  position: absolute;
+  top: 70px;
+}
+.dropdownMenu a {
+  padding: 10px;
+  color: gray;
+  border-bottom: 1px solid gray;
+  transition: all 0.2s ease-in;
+}
+.dropdownMenu div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.dropdownMenu a:hover {
+  color: #000;
+}
+
+.adminButton {
   background-color: #a62626;
   color: #fff;
   height: 40px;

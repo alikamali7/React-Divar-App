@@ -13,4 +13,10 @@ const getCookie = (cookieName) => {
     .find((token) => token.trim().split("=")[0] === cookieName)?.split("=")[1];
 };
 
-export { setCookie, getCookie };
+const deleteCookies = (name) => {
+  name.forEach((name) => {
+    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;`;
+  })
+}
+
+export { setCookie, getCookie, deleteCookies };
