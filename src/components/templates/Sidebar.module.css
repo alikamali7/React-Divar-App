@@ -1,15 +1,24 @@
 .sidebar {
-    margin-top: 30px;
-    width: 200px;
+  margin-top: 30px;
+  width: 200px;
 }
 
 .sidebar li {
-    display: flex;
-    margin: 20px 0;
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
 }
 
 .sidebar li p {
-    font-weight: 200;
-    margin-right: 10px;
-    color: gray;
+  font-weight: 200;
+  margin-right: 10px;
+  color: gray;
+}
+
+.sidebar li p:hover {
+    color: #000;
+}
+
+.selected {
+  color: #000 !important;
 }
