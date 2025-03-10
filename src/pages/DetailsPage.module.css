@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+  width: 1200;
+}
+.ImgSection {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    height: 800px;
+}
+.ImgSection img {
+  width: 488px;
+  height: 366px;
+  cursor: pointer;
+}
+
+.ImgSection p {
+  margin-top: 20px;
+  padding: 12px;
+  border-top: 2px solid #dbdbe4;
+  border-bottom: 2px solid #dbdbe4;
+  cursor: pointer;
+}
+

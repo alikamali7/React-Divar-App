@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 import { sp } from "utils/numbers";
 import { filterposts, getInitialQuery, searchPosts } from "src/helper/helper";
@@ -27,16 +27,18 @@ function Main({ posts, query, setQuery, setSearch }) {
   return (
     <div className={styles.container}>
       {displayed.map((post) => (
-        <div key={post._id} className={styles.card}>
-          <div className={styles.info}>
-            <p>{post.options?.title}</p>
-            <div>
-              <p>{sp(post.amount)} تومان</p>
-              <span>{post.options?.city}</span>
+        <Link key={post._id} to={`/details/${post._id}`}>
+          <div className={styles.card}>
+            <div className={styles.info}>
+              <p>{post.options?.title}</p>
+              <div>
+                <p>{sp(post.amount)} تومان</p>
+                <span>{post.options?.city}</span>
+              </div>
             </div>
+            <img src={`${baseURL}${post.images[0]}`} />
           </div>
-          <img src={`${baseURL}${post.images[0]}`} />
-        </div>
+        </Link>
       ))}
     </div>
   );

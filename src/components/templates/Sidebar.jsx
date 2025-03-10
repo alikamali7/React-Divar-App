@@ -4,12 +4,10 @@ import styles from "./Sidebar.module.css";
 
 function Sidebar({ categories, query, setQuery }) {
   const categoryHandler = (event) => {
-    console.log(event.target);
     const categoryId = event.target.id;
     setQuery((query) => createQueryObject(query, { categoryId }));
   };
-  console.log(query.categoryId);
-  console.log(categories.data[0]._id);
+
   return (
     <div className={styles.sidebar}>
       <h4>دسته ها</h4>

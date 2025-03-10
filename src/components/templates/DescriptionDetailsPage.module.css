@@ -1,0 +1,59 @@
+.container {
+  max-width: 450px;
+}
+.container button {
+  margin: 10px;
+  padding: 10px;
+  background-color: #a62626;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.title p {
+  color: gray;
+  font-size: 1rem;
+  margin: 8px 0 16px;
+}
+
+.danger {
+  padding: 12px;
+  border-top: 2px solid #dbdbe4;
+  border-bottom: 2px solid #dbdbe4;
+  cursor: pointer;
+}
+
+.warning {
+  padding: 8px;
+  color: gray;
+  border: 2px solid #dbdbe4;
+}
+ .warning p {
+  margin: 5px;
+ }
+
+ .info div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #dbdbe4;
+  padding: 10px 0;
+ }
+
+ .info div span:first-of-type {
+  color: gray;
+ }
+
+ .description {
+  margin-top: 12px;
+ }
+
+ .description h3 {
+  margin: 15px 0;
+ }
+
+ .description p {
+  color: #333;
+ }
+

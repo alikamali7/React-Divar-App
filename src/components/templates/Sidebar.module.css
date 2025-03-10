@@ -6,13 +6,13 @@
 .sidebar li {
   display: flex;
   margin: 20px 0;
-  cursor: pointer;
 }
 
 .sidebar li p {
   font-weight: 200;
   margin-right: 10px;
   color: gray;
+  cursor: pointer;
 }
 
 .sidebar li p:hover {

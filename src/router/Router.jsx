@@ -8,12 +8,13 @@ import DashboardPage from "pages/DashboardPage";
 import PageNotFound from "pages/404";
 import Loader from "components/modules/Loader";
 import { getProfile } from "services/user";
+import DetailsPage from "pages/DetailsPage";
 
 function Router() {
   const { data, isLoading, error } = useQuery(["profile"], getProfile);
-  // console.log({ data, isLoading, error });
 
   if (isLoading) return <Loader />;
+  
   return (
     <Routes>
       <Route index element={<HomePage />} />
@@ -35,6 +36,7 @@ function Router() {
           )
         }
       />
+      <Route path="/details/:id" element={<DetailsPage />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

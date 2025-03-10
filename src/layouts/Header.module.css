@@ -70,6 +70,7 @@
 }
 
 .adminButton {
+  margin-left: 20px;
   background-color: #a62626;
   color: #fff;
   height: 40px;
